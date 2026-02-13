@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="2026年春节家庭出游行程 - 天津本地春节 + 古北水镇 + 北京科技馆（10天完整行程）">
+    <title>🏮 2026年春节家庭出游行程</title>
+    <style>
+        /* 添加触摸滚动优化 */
+        html {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 头部 */
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .header .family {
+            font-size: 20px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .family-icon {
+            font-size: 24px;
+        }
+
+        /* 出行信息卡片 */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* 时间轴 */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #f39c12, #e74c3c, #9b59b6, #3498db, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .timeline-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            border: 5px solid #f39c12;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .timeline-item:nth-child(2) .timeline-dot { border-color: #f39c12; }
+        .timeline-item:nth-child(3) .timeline-dot { border-color: #e74c3c; }
+        .timeline-item:nth-child(4) .timeline-dot { border-color: #e74c3c; }
+        .timeline-item:nth-child(5) .timeline-dot { border-color: #9b59b6; }
+        .timeline-item:nth-child(6) .timeline-dot { border-color: #3498db; }
+        .timeline-item:nth-child(7) .timeline-dot { border-color: #2ecc71; }
+        .timeline-item:nth-child(8) .timeline-dot { border-color: #2ecc71; }
+        .timeline-item:nth-child(9) .timeline-dot { border-color: #95a5a6; }
+        .timeline-item:nth-child(10) .timeline-dot { border-color: #95a5a6; }
+        .timeline-item:nth-child(11) .timeline-dot { border-color: #95a5a6; }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .timeline-content::after {
+            content: '📋 点击查看详情';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 12px;
+            color: #3498db;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .timeline-content:hover::after {
+            opacity: 1;
+        }
+
+        .date-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item:nth-child(2) .date-badge { background: linear-gradient(135deg, #f39c12, #e74c3c); }
+        .timeline-item:nth-child(3) .date-badge { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+        .timeline-item:nth-child(4) .date-badge { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+        .timeline-item:nth-child(5) .date-badge { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+        .timeline-item:nth-child(6) .date-badge { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+        .timeline-item:nth-child(7) .date-badge { background: linear-gradient(135deg, #3498db, #2980b9); }
+        .timeline-item:nth-child(8) .date-badge { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .timeline-item:nth-child(9) .date-badge { background: linear-gradient(135deg, #27ae60, #95a5a6); }
+        .timeline-item:nth-child(10) .date-badge { background: linear-gradient(135deg, #95a5a6, #7f8c8d); }
+        .timeline-item:nth-child(11) .date-badge { background: linear-gradient(135deg, #7f8c8d, #95a5a6); }
+
+        .day-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .day-location {
+            font-size: 16px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .activity-list {
+            list-style: none;
+        }
+
+        .activity-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .activity-text {
+            flex: 1;
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .activity-highlight {
+            background: #fff8e1;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+            margin-top: 10px;
+        }
+
+        .activity-highlight .activity-text {
+            color: #e67e22;
+            font-weight: 500;
+        }
+
+        /* 详情弹窗 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px 20px 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .modal-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-section {
+            margin-bottom: 25px;
+        }
+
+        .modal-section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-section-content {
+            color: #34495e;
+            line-height: 1.8;
+        }
+
+        .modal-list {
+            list-style: none;
+        }
+
+        .modal-list li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .modal-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .hotel-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .travel-info {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #f39c12;
+        }
+
+        .activity-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            background: #ecf0f1;
+            border-radius: 15px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        .tag.hot {
+            background: #fee;
+            color: #e74c3c;
+        }
+
+        .tag.recommended {
+            background: #efe;
+            color: #27ae60;
+        }
+
+        /* 提示框 */
+        .tips-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tips-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tip-content {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 80px;
+            }
+
+            .timeline-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 10px;
+                max-height: 90vh;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .timeline::before {
+                background: #ddd;
+            }
+
+            .timeline-content {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>🏮 2026年春节家庭出游行程 🎊</h1>
+            <p class="subtitle">2月14日 - 2月23日 | 共10天</p>
+            <p class="family">
+                <span class="family-icon">👨‍👩‍👧‍👴‍👴</span>
+                一家三口 + 两位老人 + 两位亲戚（7人温馨之旅）
+            </p>
+        </div>
+
+        <!-- 出行信息 -->
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">📅</div>
+                <div class="info-label">出行日期</div>
+                <div class="info-value">2026.02.14 - 02.23</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">👥</div>
+                <div class="info-label">出行人数</div>
+                <div class="info-value">7人</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🚗</div>
+                <div class="info-label">出行方式</div>
+                <div class="info-value">自驾出行</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">💤</div>
+                <div class="info-label">移动时间</div>
+                <div class="info-value">下午2-4点（午睡）</div>
+            </div>
+        </div>
+
+        <!-- 时间轴行程 -->
+        <div class="timeline">
+            <!-- Day 1: 2月14日 老人抵达 -->
+            <div class="timeline-item" onclick="showModal('day1')">
+                <div class="timeline-dot">👴</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月14日 周六</span>
+                    <div class="day-title">老人抵达天津</div>
+                    <div class="day-location">📍 天津西北角</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🚄</span>
+                            <span class="activity-text">两位老人抵达天津（火车/飞机）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏠</span>
+                            <span class="activity-text">入住天津西北角家中/酒店，休整</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🥟</span>
+                            <span class="activity-text">西北角简单晚餐，品尝地道天津味儿</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 2: 2月15日 除夕前一天 -->
+            <div class="timeline-item" onclick="showModal('day2')">
+                <div class="timeline-dot">🏮</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月15日 周日 除夕前一天</span>
+                    <div class="day-title">西北角传统早餐 + 古文化街庙会</div>
+                    <div class="day-location">📍 天津西北角 → 古文化街</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🥟</span>
+                            <span class="activity-text">9:00-10:30 西北角早餐（张记炸糕、面茶、锅巴菜等）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏮</span>
+                            <span class="activity-text">11:00-13:30 古文化街逛庙会（舞龙舞狮、民俗表演）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">💤</span>
+                            <span class="activity-text">14:00-16:00 返回家中休息</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🎆</span>
+                            <span class="activity-text">晚上准备第二天年夜饭食材</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">春节气息浓厚！就在家门口，老人孩子都适合</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: 2月16日 除夕 -->
+            <div class="timeline-item" onclick="showModal('day3')">
+                <div class="timeline-dot">🧧</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月16日 周一 除夕</span>
+                    <div class="day-title">天后宫祈福 + 年夜饭 + 看春晚</div>
+                    <div class="day-location">📍 天津古文化街 → 西北角家中</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🙏</span>
+                            <span class="activity-text">上午：天后宫祈福（烧香拜佛，祈求平安）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🥟</span>
+                            <span class="activity-text">中午：回家准备年夜饭</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🥟</span>
+                            <span class="activity-text">14:00-17:00 全家一起包饺子（天津传统）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍜</span>
+                            <span class="activity-text">18:00-20:00 年夜饭，全家团圆</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">📺</span>
+                            <span class="activity-text">20:00-23:00 看春晚，聊天，发红包</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">天津传统除夕：祈福、包饺子、年夜饭、看春晚</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: 2月17日 大年初一 -->
+            <div class="timeline-item" onclick="showModal('day4')">
+                <div class="timeline-dot">🎊</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月17日 周二 大年初一</span>
+                    <div class="day-title">水上公园迎春灯会 + 相声 + 晚上亲戚来</div>
+                    <div class="day-location">📍 天津水上公园 → 西北角</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🏮</span>
+                            <span class="activity-text">上午：拜年，走亲访友</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏮</span>
+                            <span class="activity-text">白天：水上公园迎春灯会或鼓楼新春灯会</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🎭</span>
+                            <span class="activity-text">下午：名流茶馆听相声（传统天津文化）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">👨‍👩‍👧‍👴</span>
+                            <span class="activity-text">晚上：三姨和小姨夫来天津，接风洗尘</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">大年初一：灯会、相声，晚上亲戚抵达！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: 2月18日 初二 去古北水镇 -->
+            <div class="timeline-item" onclick="showModal('day5')">
+                <div class="timeline-dot">🚗</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月18日 周三 初二</span>
+                    <div class="day-title">下午前往古北水镇 + 入住"北京长城原著别墅"</div>
+                    <div class="day-location">📍 天津西北角 → 古北水镇（约130公里，2.5-3小时）</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">💤</span>
+                            <span class="activity-text">上午：自由活动，孩子午睡</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚗</span>
+                            <span class="activity-text">下午2-4点出发（孩子在车上睡觉）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏨</span>
+                            <span class="activity-text">傍晚5-6点抵达古北水镇，办理入住别墅</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍜</span>
+                            <span class="activity-text">晚餐：别墅简单用餐或水镇餐厅</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">"北京长城原著别墅"位于密云区古北水镇景区内，电话：13581795952</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6: 2月19日 初三 古北水镇 -->
+            <div class="timeline-item" onclick="showModal('day6')">
+                <div class="timeline-dot">🏘</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月19日 周四 初三</span>
+                    <div class="day-title">古北水镇 - 游览小镇 + 打铁花表演</div>
+                    <div class="day-location">📍 古北水镇景区</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🏘</span>
+                            <span class="activity-text">白天：古北水镇转小镇（6大功能区域）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">☕</span>
+                            <span class="activity-text">雪地咖啡馆休息，老人拍照</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🎆</span>
+                            <span class="activity-text">晚上：打铁花表演、无人机秀、提灯夜游</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">古北水镇分为景区和小镇两部分，打铁花震撼！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7: 2月20日 初四 一渡河 -->
+            <div class="timeline-item" onclick="showModal('day7')">
+                <div class="timeline-dot">🏔️</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月20日 周五 初四</span>
+                    <div class="day-title">前往北京一渡河（小姨和小姨夫家）</div>
+                    <div class="day-location">📍 古北水镇 → 北京一渡河（约60公里，1.5小时）</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">💤</span>
+                            <span class="activity-text">上午：自由活动，孩子午睡</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚗</span>
+                            <span class="activity-text">下午2-4点出发前往一渡河（孩子在车上睡觉）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">👨‍👩‍👧‍👴</span>
+                            <span class="activity-text">傍晚：与亲戚汇合，晚餐</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">一渡河周边有众多特色民宿，春节期间需提前预订</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 8: 2月21日 初五 北京市区 -->
+            <div class="timeline-item" onclick="showModal('day8')">
+                <div class="timeline-dot">🏛️</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月21日 周六 初五</span>
+                    <div class="day-title">前往北京市区（下午出发）</div>
+                    <div class="day-location">📍 一渡河 → 北京市区（约70公里，1.5小时）</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">💤</span>
+                            <span class="activity-text">上午：与亲戚相处，孩子午睡</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚗</span>
+                            <span class="activity-text">下午2-4点出发前往市区（孩子在车上睡觉）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏯</span>
+                            <span class="activity-text">傍晚5-6点抵达，办理入住</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">住宿推荐：朝阳区靠近科技馆，东城区靠近天安门</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 9: 2月22日 初六 中国科技馆 -->
+            <div class="timeline-item" onclick="showModal('day9')">
+                <div class="timeline-dot">🔬</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月22日 周日 初六</span>
+                    <div class="day-title">中国科技馆</div>
+                    <div class="day-location">📍 北京朝阳区 - 中国科技馆</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🔬</span>
+                            <span class="activity-text">参观中国科技馆（全天）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">👨‍👩‍👧</span>
+                            <span class="activity-text">孩子体验科学互动展品（科学乐园、机器人、太空探索）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">👴</span>
+                            <span class="activity-text">老人轻松参观，无障碍设施完善</span>
+                        </li>
+                    </ul>
+                    <div class="activity-highlight">
+                        <span class="activity-icon">⭐</span>
+                        <span class="activity-text">必须提前网上预约！春节可能闭馆，请查询确认</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 10: 2月23日 初七 返程 -->
+            <div class="timeline-item" onclick="showModal('day10')">
+                <div class="timeline-dot">🏠</div>
+                <div class="timeline-content">
+                    <span class="date-badge">2月23日 周一 初七</span>
+                    <div class="day-title">返程天津</div>
+                    <div class="day-location">📍 北京 → 天津（约120公里，2小时）</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">💤</span>
+                            <span class="activity-text">上午：收拾行李，孩子午睡</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚗</span>
+                            <span class="activity-text">下午2-4点出发返回天津（孩子在车上睡觉）</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏠</span>
+                            <span class="activity-text">傍晚4-5点抵达天津家中</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 温馨提示 -->
+        <div class="tips-box">
+            <div class="tips-title">💡 出行温馨提示</div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-title">🌡️ 天气</div>
+                    <div class="tip-content">
+                        2月北京地区气温：-5°C 至 8°C<br>
+                        天津地区气温：-8°C 至 3°C<br>
+                        建议：携带羽绒服、保暖内衣
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-title">👴 老人关怀</div>
+                    <div class="tip-content">
+                        常备药品、控制步行节奏<br>
+                        多安排休息时间<br>
+                        滑雪请教练、老人咖啡馆休息<br>
+                        注意保暖，特别是晚上看表演
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-title">🅿️ 交通提示</div>
+                    <div class="tip-content">
+                        下午出行，避开春节早高峰<br>
+                        孩子车上睡觉，老人轻松舒适<br>
+                        长途每2小时服务区休息
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-title">📱 实用APP</div>
+                    <div class="tip-content">
+                        高德/百度地图、大众点评<br>
+                        携程/去哪儿<br>
+                        古北水镇官方：古北水镇旅游
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>🎊 祝全家春节快乐，旅途愉快！🎊</p>
+            <p style="margin-top: 10px; font-size: 14px;">💡 点击每日行程卡片查看详细信息</p>
+        </div>
+    </div>
+
+    <!-- 详情弹窗 -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">标题</div>
+                <div class="modal-subtitle" id="modalSubtitle">副标题</div>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 内容动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 详情数据
+        const detailData = {
+            day1: {
+                title: '2月14日 - 老人抵达天津',
+                subtitle: '📅 周六 | 抵达日',
+                sections: [
+                    {
+                        title: '🚄 接站安排',
+                        content: `
+                            <div class="modal-list">
+                                <li>提前查询老人到达时间（火车/飞机）</li>
+                                <li>安排车辆去火车站/机场接站</li>
+                                <li>准备热水和简单食品</li>
+                                <li>入住天津西北角家中/酒店</li>
+                            </div>
+                        `
+                    },
+                    {
+                        title: '💡 第一天建议',
+                        content: `
+                            <div class="travel-info">
+                                <strong>轻松休整</strong><br><br>
+                                ✅ 老人长途奔波，需要休息<br>
+                                ✅ 简单晚餐，早点休息<br>
+                                ✅ 准备第二天的春节活动<br>
+                                ✅ 西北角就在家门口，方便出行
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day2: {
+                title: '2月15日 - 除夕前一天 | 西北角传统早餐 + 古文化街庙会',
+                subtitle: '📅 周日 | 春节氛围浓厚',
+                sections: [
+                    {
+                        title: '🥟 9:00-10:30 西北角传统早餐',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>就在家门口的地道天津味儿！</strong><br><br>
+                                <strong>推荐美食</strong>：<br>
+                                • 🥟 <strong>张记炸糕</strong>：耳朵眼炸糕、蜜麻花<br>
+                                • 🥟 <strong>糕干店</strong>：十八街麻花、糕干<br>
+                                • 🍜 <strong>面茶</strong>：天津特色面茶、面汤<br>
+                                • 🥡 <strong>锅巴菜</strong>：天津特色<br>
+                                • 🥟 <strong>石头门坎</strong>：炸糕<br><br>
+                                <strong>优势</strong>：<br>
+                                ✅ 就在家门口，老人不用走远路<br>
+                                ✅ 地道天津味儿<br>
+                                ✅ 适合全家口味
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🏮 11:00-13:30 古文化街逛庙会',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>地址</strong>：南开区古文化街（距西北角约2公里）<br>
+                                <strong>交通</strong>：公交或打车15分钟<br>
+                                <strong>时间</strong>：2月10日-2月23日全天活动<br>
+                                <strong>门票</strong>：<strong>免费进入</strong>（个别展馆需购票）<br><br>
+                                <strong>活动内容</strong>：<br>
+                                • 🏮 <strong>"非遗迎新春 曲艺过大年"</strong>主题活动<br>
+                                • 🎭 <strong>民俗仪式展示</strong>："玉皇会"等传统仪式<br>
+                                • 💃 <strong>传统花会展演</strong>：舞龙舞狮、秧歌、民间艺术<br>
+                                • 🎨 <strong>津门百戏、古街贺岁</strong>：互动文化体验<br>
+                                • 🎪 <strong>古街年货市集</strong>：传统年货、手工艺品<br><br>
+                                <strong>适合5岁儿童</strong>：✅ 看舞龙舞狮、✅ 可买小玩具、糖画、面人<br>
+                                <strong>适合老人</strong>：✅ 不需要太多步行、✅ 有休息区
+                            </div>
+                        `
+                    },
+                    {
+                        title: '💤 14:00-16:00 返回家中休息',
+                        content: `
+                            <div class="travel-info">
+                                <strong>下午安排</strong><br><br>
+                                • 老人午休<br>
+                                • 孩子休息<br>
+                                • 准备第二天年夜饭食材<br>
+                                • 晚餐西北角附近简单用餐或在家做饭
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day3: {
+                title: '2月16日 - 除夕 | 天后宫祈福 + 年夜饭 + 看春晚',
+                subtitle: '📅 周一 | 大年三十 | 团圆',
+                sections: [
+                    {
+                        title: '🙏 上午：天后宫祈福（推荐）',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>地址</strong>：古文化街内（距西北角约2公里）<br>
+                                <strong>时间</strong>：8:30-15:30<br>
+                                <strong>门票</strong>：10元（成人），学生/老人5元<br><br>
+                                <strong>活动内容</strong>：<br>
+                                • 🙏 <strong>传统祈福</strong>：烧香拜佛，祈求平安<br>
+                                • 🏮 <strong>春节活动</strong>："非遗贺新春 南开古城过大年"<br>
+                                  - 花会表演<br>
+                                  - 朗诵展演<br>
+                                  - 国潮市集<br>
+                                  - 灯光秀展示<br>
+                                • 🎋 <strong>达仁堂健康生活馆</strong>（附近）：体验传统中药文化<br><br>
+                                <strong>优势</strong>：✅ 老人祈福心安、✅ 春节氛围浓、✅ 文化底蕴深厚、✅ 距离近
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🥟 14:00-17:00 团圆时刻',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>全家人一起准备年夜饭</strong><br><br>
+                                👨‍👩‍👧‍👴‍👴 <strong>一起包饺子</strong>（天津传统）<br>
+                                👶 <strong>5岁孩子参与</strong>：<br>
+                                  - 帮忙擀皮（简单任务）<br>
+                                  - 包硬币饺子（谁吃到有福气）<br>
+                                👴 <strong>老人指导</strong>：传授天津传统<br>
+                                📸 <strong>拍照留念</strong>：全家团圆照<br><br>
+                                <strong>天津传统年夜饭菜</strong>：<br>
+                                • 🥟 <strong>饺子</strong>：除夕必备<br>
+                                • 🥘 <strong>酱肉</strong>：提前准备<br>
+                                • 🐟 <strong>炖菜</strong>：红烧肉、炖鱼<br>
+                                • 🥬 <strong>素菜</strong>：炒青菜、凉拌菜<br>
+                                • 🍚 <strong>主食</strong>：米饭、馒头<br>
+                                • 🍮 <strong>甜品</strong>：年糕、汤圆
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🌆 晚上：团圆饭 + 看春晚',
+                        content: `
+                            <div class="modal-list">
+                                <li><strong>18:00-20:00</strong> 全家围坐吃团圆饭</li>
+                                <li>🥘 敬酒祝福：晚辈敬老人</li>
+                                <li>🧧 孩收红包：春节传统</li>
+                                <li>📸 全家福合影</li>
+                                <li><strong>20:00-23:00</strong> 看春晚、家庭聊天、老人讲过去的故事</li>
+                                <li>🧧 孩玩红包、兴奋的等待大年初一</li>
+                                <li><strong>23:00</strong> 传统放鞭炮时间（如允许）</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day4: {
+                title: '2月17日 - 大年初一 | 水上公园迎春灯会 + 相声 + 晚上亲戚来',
+                subtitle: '📅 周二 | 大年初一 | 拜年',
+                sections: [
+                    {
+                        title: '🏮 上午：拜年',
+                        content: `
+                            <div class="modal-list">
+                                <li><strong>方案A：走亲访友（传统）</strong></li>
+                                <li>早上拜年、给长辈拜年、收发红包、互相祝福</li>
+                                <li><br></li>
+                                <li><strong>方案B：水上公园迎春灯会（推荐！）</strong></li>
+                                <li>地址：南开区水上公园（距西北角约3公里）</li>
+                                <li>时间：2月10日-2月20日</li>
+                                <li>门票：参考往年约20-50元，具体待确认</li>
+                                <li>活动：🏮 "迎春灯会"，精美灯组展览</li>
+                                <li>适合5岁儿童：✅ 各种漂亮灯笼、✅ 不需要太多体力</li>
+                                <li>适合老人：✅ 平地散步不累、✅ 有休息区</li>
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🎭 下午：传统曲艺',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>方案A：古文化街听相声（推荐）</strong><br><br>
+                                📍 <strong>地点</strong>：名流茶馆古文化街店<br>
+                                🎭 <strong>特色</strong>：传统天津相声<br>
+                                ⏰ <strong>时间</strong>：每天4-5场，每场约2小时<br>
+                                💰 <strong>票价</strong>：约40-80元/人<br><br>
+                                <strong>优势</strong>：<br>
+                                ✅ 天津传统文化<br>
+                                ✅ 老人喜欢相声<br>
+                                ✅ 5岁孩子可能听不懂但能感受氛围<br>
+                                ✅ 有茶点供应<br><br>
+                                <strong>方案B：鼓楼新春灯会</strong><br>
+                                📍 <strong>地址</strong>：鼓楼商业街<br>
+                                🕐 <strong>时间</strong>：2月13日-3月4日（全天开放）<br>
+                                💰 <strong>门票</strong>：单人票29.9元起，<strong>70岁以上老人免费</strong>，<strong>1.2米以下儿童免费</strong><br>
+                                🏮 <strong>活动</strong>：大型灯组展览、古装巡游表演、有奖猜灯谜、投影灯光秀
+                            </div>
+                        `
+                    },
+                    {
+                        title: '👨‍👩‍👧‍👴 晚上：三姨和小姨夫来天津',
+                        content: `
+                            <div class="modal-list">
+                                <li>晚上聚餐，接风洗尘</li>
+                                <li>小孩玩耍，老人聊天</li>
+                                <li>安排住宿（西北角家中或附近酒店）</li>
+                                <li>家庭团聚，准备明天一起出发去古北水镇</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day5: {
+                title: '2月18日 - 初二 | 下午前往古北水镇 + 入住"北京长城原著别墅"',
+                subtitle: '📅 周三 | 初二 | 出发',
+                sections: [
+                    {
+                        title: '💤 上午：自由活动',
+                        content: `
+                            <div class="travel-info">
+                                <strong>上午安排</strong><br><br>
+                                ✅ 自由活动，老人孩子休息<br>
+                                ✅ 收拾行李，准备出发<br>
+                                ✅ 孩子午睡（重要！）
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🚗 下午2-4点：出发前往古北水镇',
+                        content: `
+                            <div class="travel-info">
+                                <strong>行程</strong>：天津西北角 → 古北水镇<br>
+                                <strong>距离</strong>：约130公里<br>
+                                <strong>时间</strong>：约2.5-3小时<br><br>
+                                ✅ 孩子午睡期间出发<br>
+                                ✅ 孩子在车上继续睡<br>
+                                ✅ 避开春节早高峰<br>
+                                ✅ 中途可服务区休息1次
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🏨 傍晚5-6点：抵达并入住"北京长城原著别墅"',
+                        content: `
+                            <div class="hotel-info">
+                                <strong>📍 别墅位置</strong><br><br>
+                                北京市密云区古北水镇国际旅游度假区龙湖长城源著小区<br><br>
+                                <strong>📞 联系方式</strong>：13581795952<br><br>
+                                <strong>📱 在线预订</strong>：携程、去哪儿等平台<br><br>
+                                <strong>特色</strong><br>
+                                • 位于司马台长城脚下，景区内<br>
+                                • 长城风格别墅，设施完善<br>
+                                • 适合家庭入住，5-7人<br>
+                                • 独立院落，享受家庭时光<br><br>
+                                💡 建议：春节前提前预订！
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🍜 晚餐安排',
+                        content: `
+                            <div class="modal-list">
+                                <li>别墅简单用餐或水镇餐厅</li>
+                                <li>早休息，养精蓄锐</li>
+                                <li>准备第二天的古北水镇游览</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day6: {
+                title: '2月19日 - 初三 | 古北水镇 - 游览小镇 + 打铁花表演',
+                subtitle: '📅 周四 | 初三 | 水镇体验',
+                sections: [
+                    {
+                        title: '🏘️ 白天：古北水镇转小镇',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>小镇特色</strong><br><br>
+                                古北水镇分为<strong>景区</strong>和<strong>小镇</strong>两部分<br>
+                                <br>
+                                <strong>六大功能区域</strong>：<br>
+                                • 🏮 令营区<br>
+                                • 🎨 民国街区<br>
+                                • 🌊 龙堡民俗文化区<br>
+                                • 🚣 水镇风情区（司马台长城）<br>
+                                • 🏞️ 河古寨区<br>
+                                • 🏨 住宿餐饮区<br><br>
+                                <strong>独特体验</strong>：<br>
+                                • 北方水乡风貌：石板街道、小瓦屋顶<br>
+                                • 夜晚万盏灯笼点亮：梦幻夜景<br>
+                                • 四季景观：春碧水潺、夏日红叶、秋日金黄、冬雪温泉<br><br>
+                                💡 小镇无需门票，可自由漫步，体验传统文化
+                            </div>
+                        `
+                    },
+                    {
+                        title: '☕ 白天轻松游览',
+                        content: `
+                            <div class="travel-info">
+                                <strong>建议游览节奏</strong><br><br>
+                                • 上午：慢慢游览小镇，感受水乡风情<br>
+                                • 中午：水镇餐厅用餐，品尝密云特色菜<br>
+                                • 下午：继续游览或在咖啡馆休息<br>
+                                • 适合老人：平地散步，不累<br>
+                                • 适合孩子：可买小玩具、糖画、面人<br><br>
+                                💡 重点是享受古镇氛围，不用赶景点
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🎆 晚上：打铁花等表演',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>春节表演活动</strong><br><br>
+                                • <strong>打铁花</strong>：非遗表演，震撼壮观<br>
+                                • <strong>舞火表演</strong>：传统技艺<br>
+                                • <strong>无人机表演</strong>：夜空灯光秀<br>
+                                • <strong>提灯夜游</strong>：提灯笼夜游古镇<br>
+                                • <strong>古镇杂耍</strong>：民间艺术<br><br>
+                                ⚠️ <strong>表演时间</strong>：通常19:30-21:30，具体以景区当日公布为准
+                            </div>
+                        `
+                    },
+                    {
+                        title: '📸 拍照留念',
+                        content: `
+                            <div class="modal-list">
+                                <li><strong>日月岛广场</strong>：古镇全景</li>
+                                <li><strong>水街桥头</strong>：小桥流水人家</li>
+                                <li><strong>小镇夜景</strong>：灯笼点亮，梦幻氛围</li>
+                                <li><strong>司马台长城</strong>：背景壮观</li>
+                                <li><strong>家庭合影</strong>：留下 vacation 美好回忆</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day7: {
+                title: '2月20日 - 初四 | 前往北京一渡河（小姨和小姨夫家）',
+                subtitle: '📅 周五 | 初四 | 与亲戚汇合',
+                sections: [
+                    {
+                        title: '💤 上午：自由活动',
+                        content: `
+                            <div class="travel-info">
+                                <strong>上午安排</strong><br><br>
+                                ✅ 自由活动<br>
+                                ✅ 孩子午睡<br>
+                                ✅ 收拾行李，准备出发
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🚗 下午2-4点：出发前往一渡河',
+                        content: `
+                            <div class="travel-info">
+                                <strong>行程</strong>：古北水镇 → 北京一渡河<br>
+                                <strong>距离</strong>：约60公里<br>
+                                <strong>时间</strong>：约1.5小时<br><br>
+                                ✅ 孩子午睡期间出发<br>
+                                ✅ 避开春节返城高峰
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🏠 一渡河住宿',
+                        content: `
+                            <div class="hotel-info">
+                                <strong>民宿推荐</strong><br><br>
+                                一渡河周边有众多特色民宿<br>
+                                <strong>特色</strong>：<br>
+                                • 农家菜、山景房<br>
+                                • 亲子乐园<br>
+                                • 可体验乡村生活<br><br>
+                                💡 春节期间需提前预订<br>
+                                💡 价格：200-400元/晚（可住5-7人）
+                            </div>
+                        `
+                    },
+                    {
+                        title: '👨‍👩‍👧‍👴 家庭团聚',
+                        content: `
+                            <div class="modal-list">
+                                <li>傍晚抵达，与亲戚汇合</li>
+                                <li>孩子们一起玩，老人聊天</li>
+                                <li>晚餐：农家菜，丰盛家宴</li>
+                                <li>晚上：家庭聚会，聊天交流</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day8: {
+                title: '2月21日 - 初五 | 前往北京市区',
+                subtitle: '📅 周六 | 初五 | 北京市区',
+                sections: [
+                    {
+                        title: '💤 上午：与亲戚相处',
+                        content: `
+                            <div class="travel-info">
+                                <strong>上午安排</strong><br><br>
+                                ✅ 与亲戚相处，孩子一起玩<br>
+                                ✅ 老人聊天<br>
+                                ✅ 孩子午睡
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🚗 下午2-4点：出发前往市区',
+                        content: `
+                            <div class="travel-info">
+                                <strong>行程</strong>：一渡河 → 北京市区<br>
+                                <strong>距离</strong>：约70公里<br>
+                                <strong>时间</strong>：约1.5小时<br><br>
+                                ✅ 孩子午睡期间出发<br>
+                                ✅ 建议：走京承高速，避开拥堵
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🏨 北京住宿',
+                        content: `
+                            <div class="hotel-info">
+                                <strong>住宿区域推荐</strong><br><br>
+                                <strong>朝阳区</strong>：靠近科技馆，方便明天参观<br>
+                                <strong>东城区</strong>：靠近天安门，便于游览<br>
+                                <strong>海淀区</strong>：交通便利，餐饮丰富<br><br>
+                                💡 建议：选择有停车场、早餐的酒店<br>
+                                💡 春节期间需提前预订
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🌆 傍晚安排',
+                        content: `
+                            <div class="modal-list">
+                                <li>约下午5-6点抵达市区</li>
+                                <li>办理入住，稍事休息</li>
+                                <li>晚餐：烤鸭或其他北京特色</li>
+                                <li>晚上：酒店休息，养精蓄锐</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day9: {
+                title: '2月22日 - 初六 | 中国科技馆',
+                subtitle: '📅 周日 | 初六 | 科学探索',
+                sections: [
+                    {
+                        title: '🔬 中国科技馆',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>基本信息</strong><br><br>
+                                📍 <strong>地址</strong>：北京市朝阳区北辰东路5号<br>
+                                🕐 <strong>开放时间</strong>：09:00 - 17:00（周一闭馆）<br>
+                                🎫 <strong>门票</strong>：成人30元，学生/老人15元<br>
+                                💡 <strong>必须提前网上预约！</strong><br><br>
+                                <strong>预约方式</strong>：<br>
+                                • 中国科技馆官网或微信公众号<br>
+                                • 提前7天可预约<br>
+                                • 春节期间热门，尽早预约<br>
+                                • ⚠️ <strong>春节可能闭馆</strong>，请务必提前确认！
+                            </div>
+                        `
+                    },
+                    {
+                        title: '👨‍👩‍👧 适合孩子的展区',
+                        content: `
+                            <div class="modal-list">
+                                <li><strong>科学乐园</strong>：适合3-12岁儿童</li>
+                                <li><strong>互动体验</strong>：动手操作，学习科学</li>
+                                <li><strong>机器人展区</strong>：观看机器人表演</li>
+                                <li><strong>太空探索</strong>：航天器模型，宇航员体验</li>
+                            </div>
+                        `
+                    },
+                    {
+                        title: '👴 老人友好',
+                        content: `
+                            <div class="travel-info">
+                                <strong>无障碍设施完善</strong><br><br>
+                                • 电梯覆盖全馆<br>
+                                • 轮椅可租借<br>
+                                • 休息区充足<br>
+                                • 温度适宜，冬暖夏凉<br><br>
+                                💡 建议：上午10点到达，参观3-4小时
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🍽️ 用餐建议',
+                        content: `
+                            <div class="modal-list">
+                                <li>科技馆内有餐厅：快餐、咖啡</li>
+                                <li>奥体中心周边：餐饮选择多</li>
+                                <li>建议：中午12点午餐，休息1小时</li>
+                            </div>
+                        `
+                    }
+                ]
+            },
+            day10: {
+                title: '2月23日 - 初七 | 返程天津',
+                subtitle: '📅 周一 | 初七 | 圆满结束',
+                sections: [
+                    {
+                        title: '💤 上午：收拾行李',
+                        content: `
+                            <div class="travel-info">
+                                <strong>上午安排</strong><br><br>
+                                ✅ 收拾行李<br>
+                                ✅ 孩子午睡<br>
+                                ✅ 整理物品，检查遗漏
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🚗 下午2-4点：出发返回天津',
+                        content: `
+                            <div class="travel-info">
+                                <strong>行程</strong>：北京市区 → 天津<br>
+                                <strong>距离</strong>：约120公里<br>
+                                <strong>时间</strong>：约2小时<br><br>
+                                ✅ 孩子午睡期间出发<br>
+                                ✅ 避开春节返程高峰
+                            </div>
+                        `
+                    },
+                    {
+                        title: '🏠 抵达后安排',
+                        content: `
+                            <div class="modal-list">
+                                <li>约下午4-5点抵达天津家中</li>
+                                <li>老人和孩子休息</li>
+                                <li>整理行李和照片</li>
+                                <li>愉快的春节之旅圆满结束</li>
+                            </div>
+                        `
+                    },
+                    {
+                        title: '📸 照片整理建议',
+                        content: `
+                            <div class="modal-section-content">
+                                <strong>整理方式</strong><br><br>
+                                • 按日期分类整理照片<br>
+                                • 制作电子相册或打印<br>
+                                • 分享给家人朋友<br>
+                                • 保存美好回忆
+                            </div>
+                        `
+                    }
+                ]
+            }
+        };
+
+        // 显示弹窗
+        function showModal(dayId) {
+            const data = detailData[dayId];
+            if (!data) return;
+
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalSubtitle').textContent = data.subtitle;
+
+            let bodyHtml = '';
+            data.sections.forEach(section => {
+                bodyHtml += `
+                    <div class="modal-section">
+                        <div class="modal-section-title">${section.title}</div>
+                        <div class="modal-section-content">${section.content}</div>
+                    </div>
+                `;
+            });
+            document.getElementById('modalBody').innerHTML = bodyHtml;
+
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 关闭弹窗
+        function closeModal(event) {
+            if (event && event.target !== document.getElementById('modalOverlay')) {
+                return;
+            }
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ESC键关闭弹窗
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    item.style.transition = 'all 0.6s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+    </script>
+</body>
+</html>
